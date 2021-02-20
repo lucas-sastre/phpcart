@@ -26,7 +26,7 @@
 					$location = "uploads/";
 					if(move_uploaded_file($tmp_name, $location.$name)){
 						//$smsg = "Uploaded Successfully";
-						$sql = "INSERT INTO products (name, description, catid, price, thumb) VALUES ('$prodname', '$description', '$category', '$price', '$location$name')";
+						$sql = "INSERT INTO products (name, description, catid, price, thumb, unit) VALUES ('$prodname', '$description', '$category', '$price', '$location$name',1)";
 						$res = mysqli_query($connection, $sql);
 						if($res){
 							//echo "Product Created";
